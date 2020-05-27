@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>test06_Quiz.html</title>
+<script type="text/javascript" src="js/jquery-3.5.1.js"></script>
+</head>
+<body>
+	<!-- 버튼을 클릭하면 이미지를 서로 번갈아 바꿔보세요. -->
+	<input type="button" value="이미지바꾸기" id="btn1"><br>
+	<img src="images/1.png" id="img1">
+	<img src="images/2.png" id="img2"><br><br>
+	기타사항<input type="checkbox" id="chk">
+	<input type="text" id="msg" size="50"><br>
+</body>
+<script type="text/javascript">
+	$("#btn1").click(function(){
+		var src=$("#img2").prop("src");
+		$("#img2").prop("src", $("#img1").prop("src"));
+		$("#img1").prop("src", src);
+	});
+	
+	$("#msg").prop("disabled",true);
+	
+	$("#chk").click(function(){
+		$("#msg").prop("disabled",!$("#chk").prop("checked"));
+		$("#msg").focus();
+	});
+</script>
+</html>

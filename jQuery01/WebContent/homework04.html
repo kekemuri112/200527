@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>homework04.html</title>
+<script type="text/javascript" src="js/jquery-3.5.1.js"></script>
+</head>
+<body>
+	가로<input type="text" id="wid"><br>
+	세로<input type="text" id="hei"><br>
+	색상<input type="text" id="col"><br>
+	<input type="button" value="적용" id="btn1"><br>
+	<div id="div1">
+	</div>
+</body>
+<script type="text/javascript">
+	$("#btn1").click(function(){
+		$("#div1").css({
+			"width" : parseInt($("#wid").val()),
+			"height" : parseInt($("#hei").val()),
+			"background-color" : $("#col").val()
+		});
+	});
+</script>
+</html>

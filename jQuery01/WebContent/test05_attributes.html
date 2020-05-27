@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>test05_attributes.html</title>
+<script type="text/javascript" src="js/jquery-3.5.1.js"></script>
+</head>
+<body>
+	<input type="button" value="이미지변경" id="btn1">
+	<input type="button" value="이미지변경" id="btn2"><br>
+	<img src="images/햄버거.png" id="img1" style="width: 150px;"><br>
+	<input type="button" value="체크박스상태" id="btn3"><br>
+	<input type="checkbox" id="chk1" checked="checked">
+</body>
+<script type="text/javascript">
+	$("#btn3").click(function(){
+		var checked=$("#chk1").prop("checked");
+		alert("체크된상태"+checked);
+	});
+
+	$("#btn1").click(function(){
+		$("#img1").prop("src","images/햄버거2.png");
+		var src=$("#img1").prop("src");
+		console.log(src);
+	});
+	$("#btn2").click(function(){
+		$("#img1").attr("src","images/1.png");
+		var src=$("#img1").attr("src");
+		console.log(src);
+	});
+	//prop 자바스크립트 상태값, attr HTML 속성값
+</script>
+</html>

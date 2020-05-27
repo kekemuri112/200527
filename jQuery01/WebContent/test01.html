@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>test01.html</title>
+<script type="text/javascript" src="js/jquery-3.5.1.js"></script>
+<script type="text/javascript">
+/*
+	window.onload=function(){
+		var btn1=document.getElementById("btn1");
+		btn1.onclick=function(){
+			alert("버튼클릭!!");
+		}
+	}
+*/
+	$(document).ready(function(){
+		//alert("jQuery준비완료!");
+		$("#btn1").click(function(){
+			alert("버튼을 클릭했군요!!");
+		});
+		$("#btn2").click(function(){
+			//$("#div1").hide(1000);	// 아이디가 div객체.hide()를 사용하여 숨김
+			//$("#div1").slideUp(1000);	// 위로 숨김
+			$("#div1").fadeOut(1000);	// 서서히 사라짐
+		});
+		$("#btn3").click(function(){
+			//$("#div1").slideDown(1000);
+			//$("#div1").show(1000);
+			$("#div1").fadeIn(1000);
+		});
+		$("#btn4").click(function(){
+			$("#div1").toggle(1000);
+		});
+	});
+
+</script>
+</head>
+<body>
+	<input type="button" value="btn1" id="btn1">
+	<input type="button" value="hide" id="btn2">
+	<input type="button" value="show" id="btn3">
+	<input type="button" value="toggle" id="btn4">
+	<div id="div1" style="width: 300px;height: 200px;background-color: orange;">
+		안녕 jQuery!!!!
+	</div>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>homework05.html</title>
+<script type="text/javascript" src="js/jquery-3.5.1.js"></script>
+<style type="text/css">
+	img{width: 150px; height: 100px;}
+</style>
+</head>
+<body>
+	<img src="images/1.jpg">
+	<img src="images/2.jpg">
+	<img src="images/3.jpg">
+	<img src="images/4.jpg">
+	<div id="div1">
+		<img id="img1" style="width: 600px;height: 400px">
+	</div>
+</body>
+<script type="text/javascript">
+	$("img").hover(function(){
+		$("#img1").prop("src",$(this).prop("src"));
+	},function(){
+		$("#img1").prop("src","");
+	});
+</script>
+</html>

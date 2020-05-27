@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>homework02.html</title>
+<script type="text/javascript" src="js/jquery-3.5.1.js"></script>
+</head>
+<body>
+	<input type="button" value="도서" id="btn1">
+	<input type="button" value="영화" id="btn2">
+	<input type="button" value="음악" id="btn3"><br>
+	<div id="div1" style="width: 500px;height: 300px;background-color: yellow;">
+	
+	</div>
+</body>
+<script type="text/javascript">
+	$("#btn1").click(function(){
+		$("#div1").html("<h1>여기는 도서어쩌구 입니다...</h1>");
+	});
+	$("#btn2").click(function(){
+		$("#div1").html("<h1>여기는 음악어쩌구 입니다...</h1>");
+	});
+	$("#btn3").click(function(){
+		$("#div1").html("<h1>여기는 영화어쩌구 입니다...</h1>");
+	});
+</script>
+</html>

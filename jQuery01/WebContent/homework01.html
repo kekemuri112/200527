@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>homework01.html</title>
+<script type="text/javascript" src="js/jquery-3.5.1.js"></script>
+</head>
+<body>
+	<input type="text" id="num1"> +
+	<input type="text" id="num2"> =
+	<input type="text" id="sum" readonly="readonly">
+	<input type="button" value="합구하기" id="btn">
+</body>
+<script type="text/javascript">
+	$("#btn").click(function(){
+		$("#sum").val(parseInt($("#num1").val())+parseInt($("#num2").val()));
+	});
+</script>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>test07_Quiz.html</title>
+<script type="text/javascript" src="js/jquery-3.5.1.js"></script>
+</head>
+<body>
+	회원이름<input type="text" id="name1"><br>
+	회원주소<input type="text" id="addr1" size="50"><br>
+	<input type="checkbox" id="chk">위와 동일<br>
+	받는사람<input type="text" id="name2"><br>
+	받는주소<input type="text" id="addr2" size="50"><br>
+	<input type="button" value="이미지2배로증가" id="btn1">
+	<input type="button" value="이미지2배로감소" id="btn2"><br>
+	<img src="images/햄버거.png" id="img1" style="width: 100px;height: 100px">
+</body>
+<script type="text/javascript">
+	$("#chk").click(function(){
+		if($("#chk").prop("checked")){
+			$("#name2").prop("value",$("#name1").prop("value"));
+			$("#addr2").prop("value",$("#addr1").prop("value"));
+		}else{
+			$("#name2").prop("value","");
+			$("#addr2").prop("value","");
+		}
+	});
+	$("#btn1").click(function(){
+		$("#img1").css({
+			width : 2*$("#img1").prop("width"),
+			height : 2*parseInt($("#img1").css("height"))
+		});
+	});
+	
+	$("#btn2").click(function(){
+		$("#img1").css({
+			width : $("#img1").prop("width")/2,
+			height : $("#img1").prop("height")/2
+		});
+	});
+
+</script>
+</html>
